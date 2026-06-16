@@ -13,8 +13,7 @@ const pool = new Pool({
 });
 
 pool.on('error', (err, client) => {
-  console.error('Unexpected error on idle client', err);
-  process.exit(-1);
+  console.error('Unexpected error on idle client:', err.message);
 });
 
 module.exports = {
